@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+
+  json_exporter:
+    image: quay.io/prometheuscommunity/json-exporter:v0.6.0
+    # network_mode: host #comment this out and uncomment ports
+    ports:
+    - "7979:7979"
+    volumes:
+    - "./json-exporter/config.yaml:/config.yml:ro"
+
+  prometheus:
+    image: quay.io/prometheus/prometheus:v2.48.0
+    # network_mode: host #comment this out and uncomment ports
+    ports:
+    - "9090:9090"
+    volumes:
+    - "./prometheus/prometheus.yaml:/etc/prometheus/prometheus.yml:ro"
+
+  grafana:
+    image: grafana/grafana:9.5.14
+    # network_mode: host #comment this out and uncomment ports
+    ports:
+    - "3000:3000"
+    volumes:
+    - "./grafana/dashboards/:/var/lib/grafana/dashboards/:ro"
+    - "./grafana/provisioning/:/etc/grafana/provisioning/:ro"

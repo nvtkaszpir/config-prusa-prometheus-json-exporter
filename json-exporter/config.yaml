@@ -1,0 +1,234 @@
+---
+# json-exporter config
+modules:
+  mini_version:
+    headers:
+      X-Api-Key: hgyJKWXmhvEaPnK
+    metrics:
+    - name: prusa_mini
+      type: object
+      path: '{ $.api }'
+      labels:
+        api_version: '{ $ }'
+      values:
+        api_version: 1.0
+    - name: prusa_mini
+      type: object
+      path: '{ $.server }'
+      labels:
+        server_version: '{ $ }'
+      values:
+        server_version: 1.0
+    - name: prusa_mini
+      type: object
+      path: '{ $.text }'
+      labels:
+        text: '{ $ }'
+      values:
+        name: 1.0
+    - name: prusa_mini
+      type: object
+      path: '{ $.hostname }'
+      labels:
+        hostname: '{ $ }'
+      values:
+        hostname: 1.0
+# printer
+  mini_printer:
+    headers:
+      X-Api-Key: hgyJKWXmhvEaPnK
+    metrics:
+    - name: prusa_mini_telemetry
+      type: object
+      path: '{ $.telemetry }'
+      values:
+        temp_bed_celsius: '{ $.temp-bed }'
+    - name: prusa_mini_telemetry
+      type: object
+      path: '{ $.telemetry }'
+      values:
+        temp_nozzle_celsius: '{ $.temp-nozzle }'
+    - name: prusa_mini_telemetry
+      type: object
+      path: '{ $.telemetry }'
+      values:
+        print_speed_percent: '{ $.print-speed }'
+    - name: prusa_mini_telemetry
+      type: object
+      path: '{ $.telemetry }'
+      values:
+        z_height: '{ $.z-height }'
+    - name: prusa_mini_telemetry
+      type: object
+      path: '{ $.telemetry }'
+      labels:
+        material: '{ $.material }'
+      values:
+        material: 1.0
+#################################3
+    - name: prusa_mini_temperature_tool0
+      type: object
+      path: '{ $.temperature.tool0.actual }'
+      labels:
+        name: 'actual'
+      values:
+        celsius: '{ $ }'
+    - name: prusa_mini_temperature_tool0
+      type: object
+      path: '{ $.temperature.tool0.target }'
+      labels:
+        name: 'target'
+      values:
+        celsius: '{ $ }'
+    - name: prusa_mini_temperature_tool0
+      type: object
+      path: '{ $.temperature.tool0.display }'
+      labels:
+        name: 'display'
+      values:
+        celsius: '{ $ }'
+    - name: prusa_mini_temperature_tool0
+      type: object
+      path: '{ $.temperature.tool0.offset }'
+      labels:
+        name: 'offset'
+      values:
+        celsius: '{ $ }'
+    - name: prusa_mini_temperature_bed
+      type: object
+      path: '{ $.temperature.bed.actual }'
+      labels:
+        name: 'actual'
+      values:
+        celsius: '{ $ }'
+    - name: prusa_mini_temperature_bed
+      type: object
+      path: '{ $.temperature.bed.target }'
+      labels:
+        name: 'target'
+      values:
+        celsius: '{ $ }'
+    - name: prusa_mini_temperature_bed
+      type: object
+      path: '{ $.temperature.bed.offset }'
+      labels:
+        name: 'offset'
+      values:
+        celsius: '{ $ }'
+#################################3
+    - name: prusa_mini_state
+      type: object
+      path: '{ $.state.text }'
+      labels:
+        text: '{ $ }'
+      values:
+        text: 1
+    - name: prusa_mini_state
+      type: object
+      path: '{ $.state.flags.operational }'
+      labels:
+        name: 'operational'
+      values:
+        flags: '{ $ }'
+    - name: prusa_mini_state
+      type: object
+      path: '{ $.state.flags.paused }'
+      labels:
+        name: 'paused'
+      values:
+        flags: '{ $ }'
+    - name: prusa_mini_state
+      type: object
+      path: '{ $.state.flags.cancelling }'
+      labels:
+        name: 'cancelling'
+      values:
+        flags: '{ $ }'
+    - name: prusa_mini_state
+      type: object
+      path: '{ $.state.flags.pausing }'
+      labels:
+        name: 'pausing'
+      values:
+        flags: '{ $ }'
+    - name: prusa_mini_state
+      type: object
+      path: '{ $.state.flags.sdReady }'
+      labels:
+        name: 'sdReady'
+      values:
+        flags: '{ $ }'
+    - name: prusa_mini_state
+      type: object
+      path: '{ $.state.flags.error }'
+      labels:
+        name: 'error'
+      values:
+        flags: '{ $ }'
+    - name: prusa_mini_state
+      type: object
+      path: '{ $.state.flags.closedOnError }'
+      labels:
+        name: 'closedOnError'
+      values:
+        flags: '{ $ }'
+    - name: prusa_mini_state
+      type: object
+      path: '{ $.state.flags.ready }'
+      labels:
+        name: 'ready'
+      values:
+        flags: '{ $ }'
+    - name: prusa_mini_state
+      type: object
+      path: '{ $.state.flags.busy }'
+      labels:
+        name: 'busy'
+      values:
+        flags: '{ $ }'
+# job
+  mini_job:
+    headers:
+      X-Api-Key: hgyJKWXmhvEaPnK
+    metrics:
+    - name: prusa_mini_job
+      type: object
+      path: '{ $.state }'
+      labels:
+        name: '{ $ }'
+      values:
+        state: 1
+    - name: prusa_mini_job
+      type: object
+      path: '{ $.job.estimatedPrintTime }'
+      values:
+        estimatedPrintTime_seconds: '{ $ }'
+    # can be an overkill due to labels
+    - name: prusa_mini_job
+      type: object
+      path: '{ $.job.file }'
+      labels:
+        name: '{ $.name }'
+        path: '{ $.name }'
+        display: '{ $.name }'
+      values:
+        file: 1
+    - name: prusa_mini_progress
+      type: object
+      path: '{ $.progress.completion }'
+      values:
+        percent: '{ $ }'
+    - name: prusa_mini_progress
+      type: object
+      path: '{ $.progress.printTime }'
+      labels:
+        name: print_time
+      values:
+        seconds: '{ $ }'
+    - name: prusa_mini_progress
+      type: object
+      path: '{ $.progress.printTimeLeft }'
+      labels:
+        name: print_time_left
+      values:
+        seconds: '{ $ }'

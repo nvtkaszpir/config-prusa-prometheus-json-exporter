@@ -1,0 +1,16 @@
+{
+    "state": "Printing",
+    "job": {
+        "estimatedPrintTime": 699,
+        "file": {
+            "name": "ESP32Cam-Clamp_0.2mm_PETG_MINI_12m.gcode",
+            "path": "/usb/ESP32C~1.GCO",
+            "display": "ESP32Cam-Clamp_0.2mm_PETG_MINI_12m.gcode"
+        }
+    },
+    "progress": {
+        "completion": 0,
+        "printTime": 39,
+        "printTimeLeft": 660
+    }
+}
