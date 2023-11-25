@@ -6,6 +6,10 @@ for Prometheus to scrape metrics from Prusa3D Mini/
 Works with Prusa Mini+ firmware 4.4.1, but should be easy to adjust to other printers,
 if they expose certain data over API in JSON format.
 
+This was created as alternative to [pstrobl96/prusa_exporter](https://github.com/pstrobl96/prusa_exporter),
+because I tried to use it when it was supporting only newer firmware.
+So I decided to try json-exporter.
+
 ![preview 15min](./preview_15min.png)
 
 ![preview 2h](./preview_2h.png)
