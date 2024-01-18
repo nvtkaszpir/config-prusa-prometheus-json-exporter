@@ -13,14 +13,15 @@ So I decided to try json-exporter.
 
 ## Known limitations
 
-- Works with Prusa Mini+ firmware 4.4.1, but should be easy to adjust to other
+- Works with Prusa Mini+ firmware 4.4.1 and 5.1.2 (and probably anything in
+  between of those versions), but should be easy to adjust to other
   printers, if they expose certain data over API in JSON format.
 
 - for now it supports only one printer instance (especially in dashboard),
   because I have only one printer. Feel free to create PR.
 
 - prometheus scrapes printer status every second, doing it more frequently becomes
-  problematic
+  problematic, and even this sometimes can lead to missing metrics
 
 ## Directories
 
