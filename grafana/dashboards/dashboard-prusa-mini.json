@@ -15,7 +15,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "8.5.9"
+      "version": "8.5.27"
     },
     {
       "type": "datasource",
@@ -62,6 +62,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 2,
   "id": null,
+  "iteration": 1710707268138,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -124,7 +125,7 @@
         },
         "textMode": "name"
       },
-      "pluginVersion": "8.5.9",
+      "pluginVersion": "8.5.27",
       "targets": [
         {
           "datasource": {
@@ -352,7 +353,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.9",
+      "pluginVersion": "8.5.27",
       "targets": [
         {
           "datasource": {
@@ -432,6 +433,7 @@
         "y": 1
       },
       "id": 38,
+      "interval": "1s",
       "options": {
         "legend": {
           "calcs": [],
@@ -523,6 +525,7 @@
         "y": 1
       },
       "id": 31,
+      "interval": "1s",
       "options": {
         "legend": {
           "calcs": [],
@@ -597,7 +600,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.9",
+      "pluginVersion": "8.5.27",
       "targets": [
         {
           "datasource": {
@@ -695,7 +698,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.9",
+      "pluginVersion": "8.5.27",
       "targets": [
         {
           "datasource": {
@@ -759,7 +762,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.9",
+      "pluginVersion": "8.5.27",
       "targets": [
         {
           "datasource": {
@@ -823,7 +826,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.9",
+      "pluginVersion": "8.5.27",
       "targets": [
         {
           "datasource": {
@@ -886,7 +889,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.9",
+      "pluginVersion": "8.5.27",
       "targets": [
         {
           "datasource": {
@@ -1003,6 +1006,7 @@
         "y": 10
       },
       "id": 27,
+      "interval": "1s",
       "options": {
         "legend": {
           "calcs": [],
@@ -1113,7 +1117,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.9",
+      "pluginVersion": "8.5.27",
       "targets": [
         {
           "datasource": {
@@ -1175,7 +1179,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.9",
+      "pluginVersion": "8.5.27",
       "targets": [
         {
           "datasource": {
@@ -1285,7 +1289,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.9",
+      "pluginVersion": "8.5.27",
       "targets": [
         {
           "datasource": {
@@ -1349,7 +1353,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "8.5.9",
+      "pluginVersion": "8.5.27",
       "targets": [
         {
           "datasource": {
@@ -1441,6 +1445,7 @@
         "y": 20
       },
       "id": 22,
+      "interval": "1s",
       "options": {
         "legend": {
           "calcs": [],
@@ -1546,6 +1551,7 @@
         "y": 20
       },
       "id": 23,
+      "interval": "1s",
       "options": {
         "legend": {
           "calcs": [],
@@ -1630,8 +1636,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1747,8 +1752,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1767,6 +1771,7 @@
         "y": 27
       },
       "id": 19,
+      "interval": "1s",
       "options": {
         "legend": {
           "calcs": [],
@@ -1851,8 +1856,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1871,6 +1875,7 @@
         "y": 34
       },
       "id": 12,
+      "interval": "1s",
       "options": {
         "legend": {
           "calcs": [],
@@ -1942,8 +1947,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -1962,6 +1966,7 @@
         "y": 34
       },
       "id": 13,
+      "interval": "1s",
       "options": {
         "legend": {
           "calcs": [],
@@ -2033,8 +2038,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -2053,6 +2057,7 @@
         "y": 34
       },
       "id": 14,
+      "interval": "1s",
       "options": {
         "legend": {
           "calcs": [],
@@ -2124,8 +2129,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -2144,6 +2148,7 @@
         "y": 34
       },
       "id": 9,
+      "interval": "1s",
       "options": {
         "legend": {
           "calcs": [],
@@ -2215,8 +2220,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -2235,6 +2239,7 @@
         "y": 34
       },
       "id": 11,
+      "interval": "1s",
       "options": {
         "legend": {
           "calcs": [],
@@ -2306,8 +2311,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -2326,6 +2330,7 @@
         "y": 34
       },
       "id": 10,
+      "interval": "1s",
       "options": {
         "legend": {
           "calcs": [],
@@ -2410,8 +2415,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -2430,6 +2434,7 @@
         "y": 41
       },
       "id": 6,
+      "interval": "1s",
       "options": {
         "legend": {
           "calcs": [],
@@ -2501,8 +2506,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -2521,6 +2525,7 @@
         "y": 41
       },
       "id": 15,
+      "interval": "1s",
       "options": {
         "legend": {
           "calcs": [],
@@ -2593,8 +2598,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -2612,6 +2616,7 @@
         "y": 41
       },
       "id": 5,
+      "interval": "1s",
       "options": {
         "legend": {
           "calcs": [],
@@ -2682,8 +2687,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -2702,6 +2706,7 @@
         "y": 41
       },
       "id": 4,
+      "interval": "1s",
       "options": {
         "legend": {
           "calcs": [],
@@ -2772,8 +2777,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -2791,6 +2795,7 @@
         "y": 41
       },
       "id": 37,
+      "interval": "1s",
       "options": {
         "legend": {
           "calcs": [],
@@ -2822,29 +2827,39 @@
   "refresh": "10s",
   "schemaVersion": 36,
   "style": "dark",
-  "tags": [],
+  "tags": [
+    "prusa"
+  ],
   "templating": {
     "list": [
       {
+        "current": {
+          "selected": false,
+          "text": "Prometheus",
+          "value": "Prometheus"
+        },
         "hide": 0,
-        "label": "datasource",
-        "name": "DS_PROMETHEUS",
+        "includeAll": false,
+        "multi": false,
+        "name": "datasource",
         "options": [],
         "query": "prometheus",
+        "queryValue": "",
         "refresh": 1,
         "regex": "",
+        "skipUrlSync": false,
         "type": "datasource"
       }
     ]
   },
   "time": {
-    "from": "now-15m",
+    "from": "now-3h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Prusa",
   "uid": "PM25em4Iz",
-  "version": 37,
+  "version": 44,
   "weekStart": ""
 }
