@@ -1,27 +1,28 @@
 # About
 
 Configuration to use [json-exporter](https://github.com/prometheus-community/json_exporter)
-for Prometheus to scrape metrics from Prusa3D Mini/
+for Prometheus to scrape metrics from Prusa3D Mini.
 
 This was created as alternative to [pstrobl96/prusa_exporter](https://github.com/pstrobl96/prusa_exporter),
 because I tried to use it when it was supporting only newer firmware.
 So I decided to try json-exporter.
 
-![preview 15min](./preview_15min.png)
-
-![preview 2h](./preview_2h.png)
+![preview](./preview.png)
 
 ## Known limitations
 
-- Works with Prusa Mini+ firmware 4.4.1 and 5.1.2 (and probably anything in
+- Works with Prusa Mini+ firmware 4.4.1, 5.1.2, 6.1.2 (and probably anything in
   between of those versions), but should be easy to adjust to other
   printers, if they expose certain data over API in JSON format.
 
-- for now it supports only one printer instance (especially in dashboard),
+- for now it supports only one printer instance especially in the dashboard,
   because I have only one printer. Feel free to create PR.
 
 - prometheus scrapes printer status every second, doing it more frequently becomes
   problematic, and even this sometimes can lead to missing metrics
+
+- for long time metric storage I suggest using [VictoriaMetrics](https://victoriametrics.com/products/open-source/)
+  which is compatible with Prometheus format and many more.
 
 ## Directories
 
@@ -31,7 +32,8 @@ So I decided to try json-exporter.
 - `grafana`, `json-exporter` and `prometheus` are used by docker-compose
 
 - `prusa_api` - example json responses from the printer for easier writing code
-  whithout the need of having working printer.
+  without the need of having working printer.
+  Notice those are quite old (from firmware 5.x.x), but there is not many new params
 
 ## Configuration
 
@@ -105,3 +107,7 @@ In dashboard in `templating` list, add example section as in [here](https://gith
 ### You committed secrets to the repo
 
 I know.
+
+## References
+
+- [Prusa OpenAPI spec for Prusa Link](https://github.com/prusa3d/Prusa-Link-Web/tree/master/spec)
