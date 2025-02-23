@@ -1,0 +1,25 @@
+{
+    "job": {
+        "id": 360,
+        "progress": 15,
+        "time_remaining": 1980,
+        "time_printing": 702
+    },
+    "storage": {
+        "path": "/usb/",
+        "name": "usb",
+        "read_only": false
+    },
+    "printer": {
+        "state": "PRINTING",
+        "temp_bed": 85,
+        "target_bed": 85,
+        "temp_nozzle": 250.3,
+        "target_nozzle": 250,
+        "axis_z": 1.4,
+        "flow": 95,
+        "speed": 100,
+        "fan_hotend": 4471,
+        "fan_print": 1112
+    }
+}

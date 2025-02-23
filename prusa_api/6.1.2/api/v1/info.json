@@ -1,0 +1,7 @@
+{
+    "nozzle_diameter": 0.4,
+    "mmu": false,
+    "serial": "***redacted***",
+    "hostname": "prusa-mini",
+    "min_extrusion_temp": 170
+}

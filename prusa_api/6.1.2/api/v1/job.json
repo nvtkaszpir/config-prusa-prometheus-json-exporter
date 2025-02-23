@@ -1,0 +1,19 @@
+{
+    "id": 360,
+    "state": "PRINTING",
+    "progress": 19,
+    "time_remaining": 1920,
+    "time_printing": 791,
+    "file": {
+        "refs": {
+            "icon": "/thumb/s/usb/ROUNDD~1.GCO",
+            "thumbnail": "/thumb/l/usb/ROUNDD~1.GCO",
+            "download": "/usb/ROUNDD~1.GCO"
+        },
+        "name": "ROUNDD~1.GCO",
+        "display_name": "Round Dry Box Clip_fat_0.4n_0.2mm_PETG_MINIIS_40m.gcode",
+        "path": "/usb",
+        "size": 1702733,
+        "m_timestamp": 1740296403
+    }
+}

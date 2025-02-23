@@ -1,0 +1,38 @@
+{
+    "telemetry": {
+        "temp-bed": 40.9,
+        "temp-nozzle": 131.5,
+        "print-speed": 100,
+        "z-height": 0,
+        "material": "PETG"
+    },
+    "temperature": {
+        "tool0": {
+            "actual": 131.5,
+            "target": 170,
+            "display": 170,
+            "offset": 0
+        },
+        "bed": {
+            "actual": 40.9,
+            "target": 85,
+            "offset": 0
+        }
+    },
+    "state": {
+        "text": "Printing",
+        "flags": {
+            "link_state": "PRINTING",
+            "operational": false,
+            "paused": false,
+            "printing": true,
+            "cancelling": false,
+            "pausing": false,
+            "error": false,
+            "sdReady": false,
+            "closedOnError": false,
+            "ready": false,
+            "busy": false
+        }
+    }
+}
