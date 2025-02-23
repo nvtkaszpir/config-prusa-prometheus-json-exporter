@@ -62,7 +62,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 2,
   "id": null,
-  "iteration": 1710707268138,
+  "iteration": 1710707268139,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -1636,7 +1636,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1752,7 +1753,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1856,7 +1858,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -1947,7 +1950,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -2006,9 +2010,9 @@
           },
           "custom": {
             "axisLabel": "",
-            "axisPlacement": "auto",
+            "axisPlacement": "hidden",
             "barAlignment": 0,
-            "drawStyle": "line",
+            "drawStyle": "bars",
             "fillOpacity": 0,
             "gradientMode": "none",
             "hideFrom": {
@@ -2017,7 +2021,10 @@
               "viz": false
             },
             "lineInterpolation": "linear",
-            "lineWidth": 1,
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 2,
             "pointSize": 5,
             "scaleDistribution": {
               "type": "linear"
@@ -2032,36 +2039,35 @@
               "mode": "off"
             }
           },
+          "decimals": 0,
           "mappings": [],
+          "max": 1,
           "min": 0,
           "thresholds": {
-            "mode": "absolute",
+            "mode": "percentage",
             "steps": [
               {
-                "color": "green"
-              },
-              {
-                "color": "red",
-                "value": 80
+                "color": "green",
+                "value": null
               }
             ]
           },
-          "unit": "s"
+          "unit": "none"
         },
         "overrides": []
       },
       "gridPos": {
         "h": 6,
-        "w": 4,
+        "w": 8,
         "x": 8,
         "y": 34
       },
-      "id": 14,
+      "id": 10,
       "interval": "1s",
       "options": {
         "legend": {
           "calcs": [],
-          "displayMode": "list",
+          "displayMode": "table",
           "placement": "bottom"
         },
         "tooltip": {
@@ -2069,6 +2075,7 @@
           "sort": "none"
         }
       },
+      "pluginVersion": "8.5.27",
       "targets": [
         {
           "datasource": {
@@ -2076,13 +2083,17 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sum(prusa_mini_progress_seconds{name=\"print_time_left\"})",
-          "legendFormat": "time left",
+          "exemplar": false,
+          "expr": "sum(prusa_mini_job_file) by (display)",
+          "format": "time_series",
+          "instant": false,
+          "legendFormat": "{{display}}",
           "range": true,
           "refId": "A"
         }
       ],
-      "title": "Job Progress time left",
+      "title": "Gcode Name",
+      "transformations": [],
       "type": "timeseries"
     },
     {
@@ -2129,7 +2140,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -2144,8 +2156,8 @@
       "gridPos": {
         "h": 6,
         "w": 4,
-        "x": 12,
-        "y": 34
+        "x": 0,
+        "y": 40
       },
       "id": 9,
       "interval": "1s",
@@ -2220,7 +2232,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -2228,17 +2241,17 @@
               }
             ]
           },
-          "unit": "short"
+          "unit": "s"
         },
         "overrides": []
       },
       "gridPos": {
         "h": 6,
         "w": 4,
-        "x": 16,
-        "y": 34
+        "x": 4,
+        "y": 40
       },
-      "id": 11,
+      "id": 14,
       "interval": "1s",
       "options": {
         "legend": {
@@ -2258,13 +2271,13 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sum(prusa_mini_job_state) by (name)",
-          "legendFormat": "__auto",
+          "expr": "sum(prusa_mini_progress_seconds{name=\"print_time_left\"})",
+          "legendFormat": "time left",
           "range": true,
           "refId": "A"
         }
       ],
-      "title": "Job State",
+      "title": "Job Progress time left",
       "type": "timeseries"
     },
     {
@@ -2311,7 +2324,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -2325,11 +2339,11 @@
       },
       "gridPos": {
         "h": 6,
-        "w": 4,
-        "x": 20,
-        "y": 34
+        "w": 8,
+        "x": 8,
+        "y": 40
       },
-      "id": 10,
+      "id": 11,
       "interval": "1s",
       "options": {
         "legend": {
@@ -2349,13 +2363,13 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "sum(prusa_mini_job_file) by (display)",
-          "legendFormat": "{{display}}",
+          "expr": "sum(prusa_mini_job_state) by (name)",
+          "legendFormat": "__auto",
           "range": true,
           "refId": "A"
         }
       ],
-      "title": "Gcode Name",
+      "title": "Job State",
       "type": "timeseries"
     },
     {
@@ -2364,7 +2378,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 40
+        "y": 46
       },
       "id": 2,
       "panels": [],
@@ -2415,7 +2429,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -2431,7 +2446,7 @@
         "h": 6,
         "w": 4,
         "x": 0,
-        "y": 41
+        "y": 47
       },
       "id": 6,
       "interval": "1s",
@@ -2506,7 +2521,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -2522,7 +2538,7 @@
         "h": 6,
         "w": 4,
         "x": 4,
-        "y": 41
+        "y": 47
       },
       "id": 15,
       "interval": "1s",
@@ -2598,7 +2614,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -2613,7 +2630,7 @@
         "h": 6,
         "w": 4,
         "x": 8,
-        "y": 41
+        "y": 47
       },
       "id": 5,
       "interval": "1s",
@@ -2687,7 +2704,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -2703,7 +2721,7 @@
         "h": 6,
         "w": 4,
         "x": 12,
-        "y": 41
+        "y": 47
       },
       "id": 4,
       "interval": "1s",
@@ -2777,7 +2795,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -2792,7 +2811,7 @@
         "h": 6,
         "w": 4,
         "x": 16,
-        "y": 41
+        "y": 47
       },
       "id": 37,
       "interval": "1s",
@@ -2860,6 +2879,6 @@
   "timezone": "",
   "title": "Prusa",
   "uid": "PM25em4Iz",
-  "version": 44,
+  "version": 45,
   "weekStart": ""
 }
